@@ -15,10 +15,6 @@
     <style type="text/css">
 
       /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
        .linediv-l {
          border-right: 1px white solid;
         }
@@ -63,6 +59,8 @@
       /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
+        background-color: #343434;
+        width: 100%;
       }
       .order {
         padding: 2% 0%;
@@ -121,79 +119,33 @@
   </head>
   <body>
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Bitstarter</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Product: Development Version</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
-        </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="row-fluid">
-          <div class="span8 offset2">
-            <div class="row-fluid statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
+  <div class="row-fluid pitch">
+    <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+    <div class="span5">
+      <div class="row-fluid">
+        <div class="span8 offset2">
+          <div class="row-fluid statistics">
+            <div class="span4">
+              <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
-                <div class="linediv-l">
+              <div class="linediv-l">
                 <h3>1000</h3> <p>backers</p>
-                </div>
               </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
-                </div>
+            </div>
+            <div class="span4">
+              <div class="linediv-c">
+                <h3>$6000</h3> <p>of $10,000</p>
               </div>
-              <div class="span4">
-                <div class="linediv-r">
+            </div>
+            <div class="span4">
+              <div class="linediv-r">
                 <h3>10</h3> <p>days left</p>
-                </div>
               </div>
             </div>
           </div>
-          <div class="row-fluid">
+        </div>
+        <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -202,15 +154,15 @@
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
-          </div>
-          <div class="row-fluid">
+        </div>
+        <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <a class="coinbase-button" data-button-style="custom_large" data-button-text="Preorder with Bitcoin"  data-code="b5f4b8dcbb23b93a774fa4d1c2a8b4ec" href="https://coinbase.com/checkouts/c6c4954c8c514c946e84d86ae1d18442">Preorder with Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
           </div>
-          </div>
-          <div class="row-fluid">
+        </div>
+        <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -223,11 +175,20 @@
             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
             <!-- AddThis Button END -->
           </div>
-          </div>
-        </div>
         </div>
       </div>
+    </div>
 
+    <div class="span5 offset1 video">
+      <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
+    </div>
+  </div>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+            
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
