@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>TripTailor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <style type="text/css">
@@ -19,9 +19,10 @@
       /* Main body and headings */
       body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        background: #F2F2F2;
+        color: #444;
       }
       .heading, .subheading {
-        color: white;
         text-align: center;
       }
       p.lead {
@@ -37,8 +38,6 @@
       /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
-        background-color: #343434;
-        width: 100%;
       }
       .order {
         padding: 2% 0%;
@@ -51,10 +50,15 @@
       }
 
       /* Marketing Copy and Footer */
+      .section1 {
+        border: 1px solid #BABABA;
+        background: white;
+        color: black;
+      }
       .copy {
         padding-top: 2.5%;
         padding-bottom: 2.5%;
-        text-align: justify;
+        text-align: center;
       }
       .asset {
         padding: 2.5% 0%;
@@ -93,58 +97,62 @@
   </head>
   <body>
 
-  <div class="row-fluid pitch">
-    <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-    <div class="span5 offset1 actions">
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <div class="row-fluid heading">
-            <div class="span12">
-              <h1>TripTailor</h1>
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid pitch">
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+        <div class="span5 offset1 actions">
+          <div class="row-fluid">
+            <div class="span8 offset2">
+              <div class="row-fluid heading">
+                <div class="span12">
+                  <h1>TripTailor</h1>
+                </div>
+              </div>
+              <div class="row-fluid subheading">
+                <div class="span12">
+                  <p class="lead">Plan a trip that suits you.</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row-fluid subheading">
-            <div class="span12">
-              <p class="lead">Plan a trip that suits you.</p>
+            <div class="row-fluid">
+              <div class="span10 offset1">
+                <!-- Bootstrap progress bar -->
+                <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+                <div class="thermometer progress active">
+                  <div class="bar bar-success" style="width: 60%;"></div>
+                  <div class="bar bar-warning" style="width: 40%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span6 offset3 order">
+                <!-- Standard Bootstrap button. -->
+                <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+                <a class="coinbase-button" data-button-style="custom_large" data-button-text="Preorder with Bitcoin"  data-code="b5f4b8dcbb23b93a774fa4d1c2a8b4ec" href="https://coinbase.com/checkouts/c6c4954c8c514c946e84d86ae1d18442">Preorder with Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span8 offset2 social">
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                  <a class="addthis_button_preferred_1"></a>
+                  <a class="addthis_button_preferred_2"></a>
+                  <a class="addthis_button_compact"></a>
+                  <a class="addthis_counter addthis_bubble_style"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
+                <!-- AddThis Button END -->
+              </div>
             </div>
           </div>
         </div>
-        <div class="row-fluid">
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row-fluid">
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <a class="coinbase-button" data-button-style="custom_large" data-button-text="Preorder with Bitcoin"  data-code="b5f4b8dcbb23b93a774fa4d1c2a8b4ec" href="https://coinbase.com/checkouts/c6c4954c8c514c946e84d86ae1d18442">Preorder with Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
-          </div>
-        </div>
-        <div class="row-fluid">
-          <div class="span8 offset2 social">
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-              <a class="addthis_button_preferred_1"></a>
-              <a class="addthis_button_preferred_2"></a>
-              <a class="addthis_button_compact"></a>
-              <a class="addthis_counter addthis_bubble_style"></a>
-            </div>
-            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
-            <!-- AddThis Button END -->
-          </div>
+
+        <div class="span5 video">
+          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
         </div>
       </div>
-    </div>
-
-    <div class="span5 video">
-      <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
     </div>
   </div>
 
@@ -158,23 +166,19 @@
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+        <div class="span4">
+          <div class="row-fluid">
+            <div class="span8 offset3 copy">
+              <h3><img src="/icons/glyphicons_206_ok_2.png" alt="Easy" /> Easy</h3>
+              <p>Type in the name of a city and let the application do all the work.</p>
+            </div>
+          </div>
         </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+        <div class="span4">
+
+        </div>
+        <div class="span4">
+
         </div>
       </div>
 
@@ -183,10 +187,7 @@
       <div class="row-fluid footer">
         <div class="span12">
           <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a></p>
         </div>
       </div>
     </div>
