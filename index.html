@@ -25,7 +25,6 @@
       /* Main body and headings */
       body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-        padding: 0% 8%;
       }
       p.lead {
         padding-top: 1.5%;
@@ -43,7 +42,7 @@
         padding: 4% 0%;
       }
       .actions {
-        padding: 4% 0%;
+        padding: 5% 0%;
       }
       .social {
         margin-top: 5%; 
@@ -52,6 +51,7 @@
       /* Marketing Copy and Footer */
       .invite {
         background: orange;
+        width: 100%;
       }
       #invite {
         font-size: 18px;
@@ -99,51 +99,60 @@
   </head>
   <body>
 
-    <div class="pitch">
-      <div class="row-fluid">
-        <div class="span5 actions">
-              <div class="row-fluid heading">
-                <div class="span12">
-                  <img class="logo" alt="Logo" src="http://i.imgur.com/dtifPvE.png">
-                </div>
-              </div>
-              <div class="row-fluid subheading">
-                <div class="span8 offset2">
-                  <p class="lead">Plan a trip that suits you.</p>
-                </div>
-              </div>
-          <div class="row-fluid social">
-            <div class="span8 offset2">
-              <!-- AddThis Button BEGIN -->
-              <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                <a class="addthis_button_preferred_1"></a>
-                <a class="addthis_button_preferred_2"></a>
-                <a class="addthis_button_compact"></a>
-                <a class="addthis_counter addthis_bubble_style"></a>
-              </div>
-              <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
-              <!-- AddThis Button END -->
-            </div>
+  <div class="pitch">
+    <div class="row-fluid">
+      <div class="span5 actions">
+        <div class="row-fluid heading">
+          <div class="span12">
+            <img class="logo" alt="Logo" src="http://i.imgur.com/dtifPvE.png">
           </div>
         </div>
-
-        <div class="span6 offset1 video">
-          <div class="row-fluid">
-            <div class="span12">
-          <img  alt="Placeholder" src="http://placehold.it/480x300">
+        <div class="row-fluid subheading">
+          <div class="span12">
+            <p class="lead">Plan a trip that suits you</p>
+          </div>
+        </div>
+        <div class="row-fluid social">
+          <div class="span12 ">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+              <a class="addthis_button_preferred_1"></a>
+              <a class="addthis_button_preferred_2"></a>
+              <a class="addthis_button_compact"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
+            <!-- AddThis Button END -->
+          </div>
         </div>
       </div>
+
+      <div class="span6 offset1 video">
+        <div class="row-fluid">
+          <div class="span12">
+            <img  alt="Placeholder" src="http://placehold.it/480x300">
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
       <div class="main">
       <div class="row-fluid invite">
           <div class="input-append span6 offset3">
-            <input class="span10" id="invite" type="text" placeholder="Enter email">
-            <button class="btn btn-success" type="button">Request Invite</button>
+            <div class="row-fluid">
+              <div class="span12">
+                <p class="lead">Get notified when we launch!</p>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span12">
+                <input class="span10" id="invite" type="text" placeholder="Enter email">
+                <button class="btn btn-success" type="button">Request Invite</button>
+              </div>
+            </div>
           </div>
       </div>
 
