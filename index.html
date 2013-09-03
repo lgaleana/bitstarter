@@ -13,6 +13,13 @@
         }
       }
 
+      @media (max-width: 767px) {
+        .invite {
+          width: auto;
+          margin: 0px -20px;
+        }
+      }
+
       /* Landscape phones and down */
       @media (max-width: 480px) { 
        .copy {
@@ -26,37 +33,49 @@
       body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 26px;
-        line-height: 40px;
-      }
       p {
         font-size: 18px;
         line-height: 24px;
+      }
+      p.subheading {
+        font-size: 30px;
+        line-height: 40px;
+        color: #404040;
       }
 
       /* Video pitch and Action */
       .pitch {
         text-align: center;
-        padding: 4% 0%;
+        padding: 3% 0%;
       }
       .actions {
-        padding: 5% 0%;
+        padding: 4% 0%;
       }
       .social {
-        margin-top: 5%; 
+        margin-top: 6%; 
       }
 
       /* Marketing Copy and Footer */
       .invite {
-        background: orange;
-        width: 100%;
+        background: #349946;
+        padding: 1.5% 0%;
       }
-      #invite {
-        font-size: 18px;
-        line-height: 24px;
+      .invite p {
+        font-size: 30px;
+        line-height: 40px;
+        color: white;
+        text-align: center;
       }
+      #email {
+        font-size: 20px;
+        line-height: 26px;
+        height: 26px;
+      }
+      .btn {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
       .copy {
         padding-top: 2.5%;
         padding-bottom: 2.5%;
@@ -102,14 +121,14 @@
   <div class="pitch">
     <div class="row-fluid">
       <div class="span5 actions">
-        <div class="row-fluid heading">
+        <div class="row-fluid">
           <div class="span12">
             <img class="logo" alt="Logo" src="http://i.imgur.com/dtifPvE.png">
           </div>
         </div>
-        <div class="row-fluid subheading">
+        <div class="row-fluid">
           <div class="span12">
-            <p class="lead">Plan a trip that suits you</p>
+            <p class="subheading">Plan a trip that suits you</p>
           </div>
         </div>
         <div class="row-fluid social">
@@ -141,16 +160,16 @@
 
       <div class="main">
       <div class="row-fluid invite">
-          <div class="input-append span6 offset3">
+          <div class=" span6 offset3">
             <div class="row-fluid">
               <div class="span12">
-                <p class="lead">Get notified when we launch!</p>
+                <p>Get notified when we launch!</p>
               </div>
             </div>
-            <div class="row-fluid">
+            <div class="row-fluid input-append">
               <div class="span12">
-                <input class="span10" id="invite" type="text" placeholder="Enter email">
-                <button class="btn btn-success" type="button">Request Invite</button>
+                <input class="span9" id="email" type="email" placeholder="Enter email">
+                <button class="btn btn-warning" type="button">Request Invite</button>
               </div>
             </div>
           </div>
