@@ -31,7 +31,7 @@
         padding: 5% 0%;
       }
 
-      /* Marketing Copy and Footer */
+      /* Invitation */
       .invite {
         background: #349946;
         padding: 1.5% 0%;
@@ -233,6 +233,27 @@
             ga('create', 'UA-43226154-1', 'herokuapp.com');
               ga('send', 'pageview');
 
+    </script>
+
+    <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+    <script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/eJcBLv3jn8RtenqRt1eQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+    <!-- A tab to launch the Classic Widget -->
+    <script>
+UserVoice = window.UserVoice || [];
+UserVoice.push(['showTab', 'classic_widget', {
+    mode: 'full',
+      primary_color: '#349947',
+        link_color: '#007dbf',
+          default_mode: 'feedback',
+            forum_id: 221117,
+              support_tab_name: 'Contact',
+                feedback_tab_name: 'Feedback',
+                  tab_label: 'Feedback',
+                    tab_color: '#349947',
+                      tab_position: 'middle-right',
+                        tab_inverted: false
+}]);
     </script>
   </body>
 </html>
