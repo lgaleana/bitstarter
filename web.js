@@ -69,5 +69,7 @@ app.post('/invites', function(request, response) {
         response.send(500);
       });
     }
+    else
+      response.send(200);
   });
 });
