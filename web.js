@@ -10,6 +10,10 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
+app.use(express.bodyParser());
+app.use(app.router);
+
+app.use("/images", express.static(__dirname + '/images'));
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
@@ -49,7 +53,7 @@ app.post('/invites', function(request, response) {
   var time = new Date().getTime();
   var Invite = global.db.Invite;
   // find if invite has already been added
-  Invite.find({where: {email: request.body.email.email}}).success(function(invite_instance) {
+  Invite.find({where: {email: request.body.email}}).success(function(invite_instance) {
     if (!invite_instance) {
       // build instance if doesn't exist and save
       var new_invite_instance = Invite.build({
@@ -58,9 +62,11 @@ app.post('/invites', function(request, response) {
       });
       new_invite_instance.save().success(function() {
         console.log('New invite requested. Email: ' + email);
+        response.send(200);
       }).error(function(err) {
         console.log(err);
+        response.send(500);
       });
     }
   });
-}
+});
