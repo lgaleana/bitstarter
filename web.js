@@ -14,6 +14,7 @@ app.use(express.bodyParser());
 app.use(app.router);
 
 app.use("/images", express.static(__dirname + '/images'));
+app.use("/styles", express.static(__dirname + '/styles'));
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
