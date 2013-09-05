@@ -25,10 +25,11 @@
       /* Video pitch and Action */
       .pitch {
         text-align: center;
-        padding: 3% 0%;
+        padding-top: 4%;
+        padding-bottom: 5%;
       }
       .actions {
-        padding: 5% 0%;
+        padding: 6% 0%;
       }
 
       /* Invitation */
@@ -36,12 +37,12 @@
         background: #349946;
         padding: 1.5% 0%;
         text-align: center;
-        margin-bottom: 3px;
-        box-shadow: 0px 3px 2px #707070;
+        margin-bottom: 4px;
+        box-shadow: 0px 4px 2px #707070;
       }
       .invite p {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 45px;
         color: white;
       }
       #email {
@@ -56,10 +57,10 @@
 
       /* Features */
       .features {
-        padding-top: 2.5%;
+        padding-top: 5%;
       }
       .copy {
-        margin-top: 7%;
+        margin-top: 6%;
       }
       .copy p {
         color: #707070;
@@ -113,6 +114,10 @@
         .copy p {
           font-size: 14px;
         }
+        iframe {
+          width: 370px;
+          height: 280px;
+        }
       }
 
       /* Tablets and down */
@@ -127,6 +132,13 @@
        .copy {
          padding: 2.5% 10%;
        }
+      }
+
+      /* UserVoice */
+      @media (max-width: 890px) {
+        .uv-tab {
+          display: none;
+        }
       }
 
       div.addthis_toolbox {
@@ -199,7 +211,7 @@
       <div class="row-fluid">
         <div class="span5 copy">
           <h3><img src="http://i.imgur.com/QsGuRDy.png" alt="Easy" /> Personal</h3>
-          <p>Forget about going over dozens of reviews and ratings when you travel.</p>
+          <p>Forget about dozens of reviews and ratings when you travel.</p>
           <h3><img src="http://i.imgur.com/TejuPXF.png" alt="Easy" /> Easy</h3>
           <p>Type in the name of a city and the application will find cool things for you.</p>
           <h3><img src="http://i.imgur.com/gKB40nC.png" alt="Easy" /> Smart</h3>
