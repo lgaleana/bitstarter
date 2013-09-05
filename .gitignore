@@ -1,7 +1,4 @@
 node_modules
-Procfile
-icons
 index.html_BACKUP
-package.json
 pgsetup.sh
 .pgpass
