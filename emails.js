@@ -25,4 +25,5 @@ global.db.Invite.findAll().success(function(invites) {
   invites.forEach(function(invite) {
     console.log(invite.email);
   });
+  return;
 });
