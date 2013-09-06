@@ -1,4 +1,4 @@
-var Sequelizeze = require('sequelize');
+var Sequelize = require('sequelize');
 var sq = null;
 var pgregex = /postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/;
 var match = process.env.DATABASE_URL.match(pgregex);
