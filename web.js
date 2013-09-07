@@ -51,25 +51,31 @@ db.sequelize.sync().complete(function(err) {
 // add order to the database if it doesn't already exist
 app.post('/invites', function(request, response) {
   var email = request.body.email;
-  var time = new Date().getTime();
-  var Invite = global.db.Invite;
-  // find if invite has already been added
-  Invite.find({where: {email: request.body.email}}).success(function(invite_instance) {
-    if (!invite_instance) {
-      // build instance if doesn't exist and save
-      var new_invite_instance = Invite.build({
-        email: email,
-        time: time
-      });
-      new_invite_instance.save().success(function() {
-        console.log('New invite requested. Email: ' + email);
+  var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if (regexEmail.test(email)) {
+    var time = new Date().getTime();
+    console.log(time);
+    var Invite = global.db.Invite;
+    // find if invite has already been added
+    Invite.find({where: {email: request.body.email}}).success(function(invite_instance) {
+      if (!invite_instance) {
+        // build instance if doesn't exist and save
+        var new_invite_instance = Invite.build({
+          email: email,
+          time: time
+        });
+        new_invite_instance.save().success(function() {
+          console.log('New invite requested. Email: ' + email);
+          response.send(200);
+        }).error(function(err) {
+          console.log(err);
+          response.send(500);
+        });
+      }
+      else
         response.send(200);
-      }).error(function(err) {
-        console.log(err);
-        response.send(500);
-      });
-    }
-    else
-      response.send(200);
-  });
+    });
+  }
+  else
+    response.send(500);
 });
