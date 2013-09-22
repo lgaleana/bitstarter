@@ -26,30 +26,40 @@
       /* Invitation */
       .invite {
         background: #349946;
-        padding: 1.5% 0%;
+        padding-top: 1.5%;
+        padding-bottom: 0.5%;
         text-align: center;
-        margin-bottom: 4px;
-        box-shadow: 0px 2px 2px #707070;
+        margin-bottom: 5px;
+        box-shadow: 0px 5px 3px #707070;
       }
-      .invite p {
-        font-size: 35px;
-        line-height: 45px;
+      .invite-text {
+        font-size: 45px;
+        line-height: 55px;
         color: white;
         text-shadow: 0px 2px 3px rgba(30,30,30,0.4);
+      }
+      .email-disclosure {
+        font-size: 11px;
+        margin: 0px;
+        color: #113317;
       }
       .invite input, .invite2 input {
         font-size: 20px;
         line-height: 26px;
-        height: 31px;
+        height: 45px;
       }
       .btn {
         font-size: 20px;
         line-height: 21px;
+        height: 45px;
       }
       .invite2 {
         border-top: 1px solid #707070;
         padding-top: 2%;
         text-align: center;
+      }
+      .invite .input-append {
+        margin-bottom: 5px;
       }
       .invite2 .input-append {
         margin-bottom: 0px;
@@ -58,7 +68,7 @@
       /* Value */
       .value {
         text-align: center;
-        padding-top: 6%;
+        padding-top: 5%;
         text-shadow: 0px 1px 3px rgba(30,30,30,0.4);
       }
       .value h1 {
@@ -68,10 +78,10 @@
 
       /* Features */
       .features {
-        padding-top: 6%;
+        padding-top: 5%;
       }
       .copy {
-        margin-top: 6%;
+        margin-top: 5%;
       }
       .title {
         position: relative;
@@ -96,7 +106,7 @@
       }
       .copy p {
         font-size: 16px;
-        margin: 11% 0%;
+        margin: 10% 0%;
       }
       .examples {
         text-align: center;
