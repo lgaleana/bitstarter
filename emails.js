@@ -31,6 +31,7 @@ global.db.Invite.findAll().success(function(invites) {
     var year = date.getFullYear();
     var hours = date.getHours();
     cont++;
+    console.log(date.getMonth());
     console.log(cont + " - " + invite.email + " " + month + "/" + day + "/" + year + ":" + date.getHours());
   });
   return;
