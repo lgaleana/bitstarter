@@ -26,13 +26,7 @@ global.db.Invite.findAll().success(function(invites) {
   invites.forEach(function(invite) {
     console.log(invite.time);
     var date = new Date(invite.time);
-    var month = date.getMonth();
-    var day = date.getDate();
-    var year = date.getFullYear();
-    var hours = date.getHours();
-    cont++;
-    console.log(date.getMonth());
-    console.log(cont + " - " + invite.email + " " + month + "/" + day + "/" + year + ":" + date.getHours());
+    console.log((++cont) + " - " + invite.email + " " + date.toDateString() + ":" + date.toTimeString());
   });
   return;
 });
