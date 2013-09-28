@@ -53,7 +53,7 @@ app.post('/invites', function(request, response) {
   var email = request.body.email;
   var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (regexEmail.test(email)) {
-    var time = new Date().getTime();
+    var time = Date.now();
     var Invite = global.db.Invite;
     // find if invite has already been added
     Invite.find({where: {email: request.body.email}}).success(function(invite_instance) {

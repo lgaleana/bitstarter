@@ -24,7 +24,7 @@ global.db = {
 global.db.Invite.findAll().success(function(invites) {
   var cont = 0;
   invites.forEach(function(invite) {
-    console.log(invite.time);
+    console.log(invite.time + " " + Date.now());
     var date = new Date(Date.now() - invite.time);
     console.log((++cont) + " - " + invite.email + ": " + date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + ":" + 
                 date.getHours());
