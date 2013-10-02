@@ -20,25 +20,116 @@ body {
   color: white;
   background: #183152;
   text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.logo h2 {
+  font-weight: bold;
+  margin: 0;
+}
+.header a {
+  font-size: 15px;
+  position: absolute;
+  right: 20%;
+  top: 20px;
+  color: #707070;
+}
+.header a:hover {
+  text-decoration: none;
 }
 
-.header {
+.intro {
   text-align: center;
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+.intro h1 {
+  font-size: 45px;
+  margin-top: 10px;
+}
+
+
+.copy {
+  margin-bottom: 6%;
+}
+.copy h2 {
+  margin-top: 5%;
+}
+.copy p {
+  font-size: 18px;
 }
 
 .actions {
-  color: white;
   background: #183152;
   text-align: center;
 }
+
+.call {
+  margin-top: 4%;
+  color: white;
+  font-size: 35px;
+}
+#email {
+  height: 60px;
+  font-size: 20px;
+}
+#submitEmail {
+  height: 60px;
+  font-size: 20px;
+  color: white;
+  background: #EB7F00;
+  border-color: #EB7F00;
+}
+#submitEmail:hover {
+  color: white;
+  background: #D47200;
+  border-color: #D47200;
+}
+
+.video {
+  margin-top: 8%;
+}
+.video h2 {
+  color: #C4D7ED;
+}
+
 .addthis_toolbox {
-  width: 112px;
+  width: 138px;
   margin: auto;
+  margin-top: 2%;
+}
+.social-button {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .footer {
-  color: #102238;
-  font-size: 10px;
+  margin-top: 3%;
+  color: #375D81;
+  font-size: 11px;
+}
+.footer a {
+  color: #375D81;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .logo h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .old-way {
+    padding-right: 5%;
+  }
+  .new-way {
+    padding-left: 5%;
+  }
 }
 
 </style>
@@ -60,29 +151,33 @@ _gaq.push(['_trackPageview']);
 <body>
 
 <div class="container">
-  <div class="row">
+  <div class="row header">
     <div class="col-md-2 col-md-offset-5 logo">
       <h2>TripTailor</h2>
     </div>
-    <div class="col-md-1 col-md-offset-3">
-      <a href="#">Feedback</a>
-    </div>
+    <p id="userVoice" class="visible-md visible-lg" href="#">Feedback</a>
   </div>
 
-  <div class="row header">
-    <div class="col-md-12"><h1>Planning a trip</h1></div>
+  <div class="row intro">
+    <div class="col-md-12"><h1>Planning a trip...</h1></div>
   </div>
 
   <div class="row">
-    <div class="col-md-6">
-      <img class="img-responsive" src="/images/rsz_student.png" alt="app examples">
-      <h2>The old way</h2>
-      <p>Spend many hours going over hundreds of reviews and hundreds of ratings, in dozens of different sites and guides.</p>
+    <div class="col-md-6 old-way visible-md visible-lg">
+      <img class="img-responsive" src="/images/rsz_student.png" alt="old way">
     </div>
-    <div class="col-md-6">
-      <img class="img-responsive" src="/images/rsz_both.png" alt="app examples">
+    <div class="col-md-6 new-way">
+      <img class="img-responsive" src="/images/rsz_both.png" alt="new way">
+    </div>
+  </div>
+  <div class="row copy">
+    <div class="col-md-6 old-way">
+      <h2>The old way</h2>
+      <p><strong>Spend many hours</strong> going over countless reviews and ratings, all with different opinions, in dozens of different sites and guides.</p>
+    </div>
+    <div class="col-md-6 new-way">
       <h2>The new way</h2>
-      <p>Get instant recommendations tailored to what you like, what is happening in your destination and your kind of trip, in one single application.
+      <p><strong>Get instant recommendations</strong> tailored to what you like, the best things at your destination and the kind of trip that you are making in one single place.
     </div>
   </div>
 </div>
@@ -90,11 +185,11 @@ _gaq.push(['_trackPageview']);
 <div class="actions">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3 call">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Sign up for early access">
+          <input id="email" type="text" class="form-control" placeholder="Sign up for early access">
           <span class="input-group-btn">
-            <button class="btn btn-warning" type="button">Sign up</button>
+            <button id="submitEmail" class="btn" type="button">Sign up</button>
           </span>
         </div>
       </div>
@@ -102,19 +197,22 @@ _gaq.push(['_trackPageview']);
 
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style">
-      <a class="addthis_button_preferred_1"><img class="img-responsive" src="/images/fb.png"></a>
-      <a class="addthis_button_preferred_2"><img class="img-responsive" src="/images/tt.png"></a>
-      <a class="addthis_button_compact"><img class="img-responsive" src="/images/more.png"></a>
+      <a class="addthis_button_preferred_1 social-button"><img class="img-responsive" src="/images/fb.png" alt="fb button"></a>
+      <a class="addthis_button_preferred_2 social-button"><img class="img-responsive" src="/images/tt.png" alt="twitter button"></a>
+      <a class="addthis_button_compact social-button"><img class="img-responsive" src="/images/more.png" alt="more button"></a>
     </div>
     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
     <!-- AddThis Button END -->
 
-    <h2>How it works</h2>
+    <div class="video">
+      <h2>How it works</h2>
+      <iframe width="480" height="360" src="//www.youtube.com/embed/tdGMD6_wPCg?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-    <iframe width="480" height="360" src="//www.youtube.com/embed/tdGMD6_wPCg?rel=0" frameborder="0" allowfullscreen></iframe>
-
-    <p class="footer">This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a></p>
+    <div class="footer">
+      <p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a></p>
+    </div>
 
   </div>
 </div>
@@ -126,14 +224,10 @@ $('#email').keyup(function(e) {
   if(e.which == 13)
     submitEmail($(this).val());
 });
-$('#email2').keyup(function(e) {
-  if(e.which == 13)
-    submitEmail($(this).val());
-});
 
 var submitEmail = function(email) {
   var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  var inputAppend = $('.input-append');
+  var inputGroup= $('.input-group');
   if (regexEmail.test(email)) {
     $.ajax('/invites', {
       type: 'POST',
@@ -141,25 +235,21 @@ var submitEmail = function(email) {
         email: email
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        inputAppend.addClass('control-group error');
+        inputGroup.addClass('has-error');
       },
       success: function(data, textStatus, jqXHR) {
-        inputAppend.fadeOut();
-        $('.invite p').fadeOut(function() {
-          $(this).text("You will be notified when the beta is ready!").fadeIn();
+        inputGroup.fadeOut(function() {
+          $(this).text("You will be notified when we launch!").fadeIn();
         });
       }
     });
   }
   else
-    inputAppend.addClass('control-group error');
+    inputGroup.addClass('has-error');
 };
 
 $('#submitEmail').click(function() {
   submitEmail($('#email').val());
-});
-$('#submitEmail2').click(function() {
-  submitEmail($('#email2').val());
 });
 </script>
 <script>
@@ -173,9 +263,33 @@ ga('send', 'pageview');
 
 </script>
 
-<!-- UserVoice JavaScript SDK (only needed once on a page) -->
-<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/eJcBLv3jn8RtenqRt1eQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+<script>
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/eJcBLv3jn8RtenqRt1eQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+}]);
+
+// Identify the user and pass traits
+// To enable, replace sample data with actual user traits and uncomment the line
+UserVoice.push(['identify', {
+}]);
+
+// Or, use your own custom trigger:
+UserVoice.push(['addTrigger', '#userVoice', { mode: 'smartvote' }]);
+
+// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+UserVoice.push(['autoprompt', {}]);
+</script>
 </body>
 </html>
 
