@@ -29,12 +29,13 @@ body {
   font-weight: bold;
   margin: 0;
 }
-.header a {
+.header p {
   font-size: 15px;
   position: absolute;
   right: 20%;
   top: 20px;
   color: #707070;
+  cursor: pointer;
 }
 .header a:hover {
   text-decoration: none;
@@ -65,19 +66,23 @@ body {
   background: #183152;
   text-align: center;
 }
-
 .call {
   margin-top: 4%;
-  color: white;
-  font-size: 35px;
+}
+.call p {
+  font-size: 24px;
+  color: #ABC8E2;
+}
+.call .input-group {
+  margin-top: 3%;
 }
 #email {
   height: 60px;
-  font-size: 20px;
+  font-size: 18px;
 }
 #submitEmail {
   height: 60px;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   background: #EB7F00;
   border-color: #EB7F00;
@@ -87,26 +92,31 @@ body {
   background: #D47200;
   border-color: #D47200;
 }
-
-.video {
-  margin-top: 8%;
-}
-.video h2 {
-  color: #C4D7ED;
-}
-
 .addthis_toolbox {
   width: 138px;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 .social-button {
   margin-left: 5px;
   margin-right: 5px;
 }
 
+.video {
+  margin-top: 8%;
+}
+.video h2 {
+  color: #ABC8E2;
+}
+.video iframe {
+  margin-top: 2%;
+  width: 90%;
+  height: 375px;
+}
+
 .footer {
   margin-top: 3%;
+  margin-bottom: 1%;
   color: #375D81;
   font-size: 11px;
 }
@@ -155,7 +165,7 @@ _gaq.push(['_trackPageview']);
     <div class="col-md-2 col-md-offset-5 logo">
       <h2>TripTailor</h2>
     </div>
-    <p id="userVoice" class="visible-md visible-lg" href="#">Feedback</a>
+    <p id="userVoice" class="visible-md visible-lg">Feedback</p>
   </div>
 
   <div class="row intro">
@@ -176,7 +186,7 @@ _gaq.push(['_trackPageview']);
       <p><strong>Spend many hours</strong> going over countless reviews and ratings, all with different opinions, in dozens of different sites and guides.</p>
     </div>
     <div class="col-md-6 new-way">
-      <h2>The new way</h2>
+      <h2>With TripTailor</h2>
       <p><strong>Get instant recommendations</strong> tailored to what you like, the best things at your destination and the kind of trip that you are making in one single place.
     </div>
   </div>
@@ -186,8 +196,9 @@ _gaq.push(['_trackPageview']);
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 call">
+        <p>Sign up for early access</p>
         <div class="input-group">
-          <input id="email" type="text" class="form-control" placeholder="Sign up for early access">
+          <input id="email" type="text" class="form-control" placeholder="Enter email">
           <span class="input-group-btn">
             <button id="submitEmail" class="btn" type="button">Sign up</button>
           </span>
@@ -205,9 +216,11 @@ _gaq.push(['_trackPageview']);
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520ea186234cadc3"></script>
     <!-- AddThis Button END -->
 
-    <div class="video">
-      <h2>How it works</h2>
-      <iframe width="480" height="360" src="//www.youtube.com/embed/tdGMD6_wPCg?rel=0" frameborder="0" allowfullscreen></iframe>
+    <div class="row video">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>How it works</h2>
+        <iframe src="//www.youtube.com/embed/tdGMD6_wPCg?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
 
     <div class="footer">
@@ -239,7 +252,7 @@ var submitEmail = function(email) {
       },
       success: function(data, textStatus, jqXHR) {
         inputGroup.fadeOut(function() {
-          $(this).text("You will be notified when we launch!").fadeIn();
+          $('.call p').text("You will be notified when we launch!").fadeIn();
         });
       }
     });
