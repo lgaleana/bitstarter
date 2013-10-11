@@ -22,6 +22,12 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+// Render perosnal.html page
+app.get('/personal', function(request, response) {
+  var data = fs.readFileSync('personal.html').toString();
+  response.send(data);
+});
+
 // Render invites
 /*app.get('/invites', function(request, response) {
   global.db.Invite.findAll().success(function(invites) {
